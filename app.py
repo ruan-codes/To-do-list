@@ -25,7 +25,7 @@ def add_task():
     new_description = request.form["description"] # Obtém a descrição da tarefa do formulário
     
     # Validar se a tarefa já foi cadastrada
-    task_done = Task.query.filter_by(description = new_description).first() # Variável que verfica se a tarefa já existe no banco de dados
+    task_done = Task.query.filter_by(description = new_description).first() # Variável que verifica se a tarefa já existe no banco de dados
     if task_done:
         return "Erro! Essa tarefa já existe", 400 # Se a tarefa já existir, retorna um erro 400
     
